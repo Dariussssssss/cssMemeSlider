@@ -1,0 +1,144 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: .2rem;
+    line-height: 1.5;
+    background: rgba(238, 238, 238, 1.00);
+    color: #00458dff;
+    overflow-y: scroll;
+}
+
+.container {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 80%;
+    font-weight: bold;
+}
+
+h1 {
+    text-align: left;
+    padding: 1rem 0 1.25rem;
+    font-size: 2rem;
+    border-bottom: 2px solid #aac7ffff;
+}
+
+input {
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    border-bottom: 2px solid #aac7ffff;
+    padding-bottom: 1rem;
+}
+
+label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+
+
+.item-checked {
+    justify-content: space-between;
+    padding: .5rem;
+}
+
+.item {
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+
+.item > img {
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 1;
+}
+
+@media (hover: none) {
+
+    input:checked ~ .item {
+        opacity: 1;
+        height: 50vh;
+    }
+
+    input:checked ~ .item-checked > .icon {
+        opacity: 1;
+        rotate: 45deg;
+    }
+}
+
+@media (hover: hover) {
+    label {
+        cursor: pointer;
+    }
+
+    .container:hover .icon {
+        opacity: 1;
+    }
+
+    input:checked ~ .item,
+    input:hover ~ .item {
+        opacity: 1;
+        height: 50vh;
+    }
+
+    input:checked ~ .item-checked > .icon,
+    input:hover ~ .item-checked > .icon {
+        rotate: 45deg;
+    }
+
+    li:active label,
+    li:active .item > img {
+        transition: .3s ease-in-out;
+        opacity: .3;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    body {
+        font-size: 1.75rem;
+    }
+
+    h1 {
+        font-size: 2.75rem;
+    }
+}
+
+@media screen and (min-width: 820px) {
+    body {
+        font-size: 1.25rem;
+    }
+
+    h1 {
+        font-size: 2.25rem;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    body {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+
+
+
