@@ -80,29 +80,6 @@ input#four:checked ~ .slider__items > .first {
     margin-left: -300%;
 }
 
-input#five:checked ~ .slider__items > .first {
-    margin-left: -400%;
-}
-
-input#six:checked ~ .slider__items > .first {
-    margin-left: -500%;
-}
-
-/*.item {*/
-/*    height: 50vh;*/
-/*    max-width: 100%;*/
-/*    align-items: center;*/
-/*    justify-content: center;*/
-/*    overflow: hidden;*/
-/*    display: none;*/
-/*}*/
-
-/*.item > img {*/
-/*    max-width: 100%;*/
-/*    max-height: 100%;*/
-/*    object-fit: contain;*/
-/*}*/
-
 .item-radio {
     padding: .3rem;
     cursor: pointer;
@@ -133,23 +110,10 @@ input#six:checked ~ .slider__items > .first {
     display: flex;
 }
 
-/*input#one:checked ~ .one,*/
-/*input#two:checked ~ .two,*/
-/*input#three:checked ~ .three,*/
-/*input#four:checked ~ .four,*/
-/*input#five:checked ~ .five,*/
-/*input#six:checked ~ .six {*/
-/*    display: flex;*/
-/*    animation-duration: 3s;*/
-/*    animation-name: slow;*/
-/*}*/
-
 input#one:checked ~ .navigation__container > .one,
 input#two:checked ~ .navigation__container > .two,
 input#three:checked ~ .navigation__container > .three,
-input#four:checked ~ .navigation__container > .four,
-input#five:checked ~ .navigation__container > .five,
-input#six:checked ~ .navigation__container > .six {
+input#four:checked ~ .navigation__container > .four {
     display: flex;
     animation-duration: 3s;
     animation-name: slow;
@@ -170,9 +134,7 @@ input#six:checked ~ .navigation__container > .six {
 input#one:checked ~ .navigation__container > .bar__container > .one > span,
 input#two:checked ~ .navigation__container > .bar__container > .two > span,
 input#three:checked ~ .navigation__container > .bar__container > .three > span,
-input#four:checked ~ .navigation__container > .bar__container > .four > span,
-input#five:checked ~ .navigation__container > .bar__container > .five > span,
-input#six:checked ~ .navigation__container > .bar__container > .six > span {
+input#four:checked ~ .navigation__container > .bar__container > .four > span {
     background-color: #00458dff;
 }
 
@@ -195,13 +157,6 @@ input#six:checked ~ .navigation__container > .bar__container > .six > span {
         font-size: 2.25rem;
     }
 
-    /*.slider__container {*/
-    /*    width: 25rem;*/
-    /*}*/
-
-    /*.item {*/
-    /*    height: 30vh;*/
-    /*}*/
     .item-radio > span {
         width: .5rem;
         height: .5rem;
@@ -227,13 +182,6 @@ input#six:checked ~ .navigation__container > .bar__container > .six > span {
         font-size: 1.5rem;
     }
 
-    /*.slider__container {*/
-    /*    width: 20rem;*/
-    /*}*/
-
-    /*.item {*/
-    /*    height: 20vh;*/
-    /*}*/
     .item-radio > span {
         width: .2rem;
         height: .2rem;
