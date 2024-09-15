@@ -20,14 +20,15 @@ body {
 .wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     gap: 30px;
     width: 100%;
 }
 
 input[type='radio'] {
-    position: absolute;
+    width: 0;
+    height: 0;
     visibility: hidden;
 }
 
@@ -35,11 +36,9 @@ input[type='radio'] {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     max-width: 100%;
     font-weight: bold;
     overflow: hidden;
-    border: 2px solid black;
 }
 
 .bar__container {
@@ -94,6 +93,13 @@ input {
     cursor: pointer;
 }
 
+.item-radio:hover {
+    background-color: lightgray;
+    transition: .5s ease-in-out;
+}
+
+
+
 input#one:checked ~ .one,
 input#two:checked ~ .two,
 input#three:checked ~ .three,
@@ -101,6 +107,20 @@ input#four:checked ~ .four,
 input#five:checked ~ .five,
 input#six:checked ~ .six {
     display: block;
+    animation-duration: 3s;
+    animation-name: slow;
+}
+
+@keyframes slow {
+    from {
+        margin-left: 50%;
+        width: 110%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 1920px) {
