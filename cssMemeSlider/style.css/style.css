@@ -25,8 +25,8 @@ input[type='radio'] {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    max-width: 40rem;
     gap: 1rem;
-    width: 50%;
     font-weight: bold;
     overflow: hidden;
 }
@@ -52,18 +52,56 @@ li {
     font-size: 1.5rem;
 }
 
-.item {
-    height: 50vh;
-    align-items: center;
-    justify-content: center;
+.slider__items {
+    display: flex;
     overflow: hidden;
-    display: none;
 }
 
-.item > img {
-    max-width: 100%;
-    max-height: 100%;
+img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: all 2s ease;
 }
+
+input#one:checked ~ img .first {
+    margin-left: 0;
+}
+
+input#two:checked ~ .slider__items > .first {
+    margin-left: -100%;
+}
+
+input#three:checked ~ .slider__items > .first {
+    margin-left: -200%;
+}
+
+input#four:checked ~ .slider__items > .first {
+    margin-left: -300%;
+}
+
+input#five:checked ~ .slider__items > .first {
+    margin-left: -400%;
+}
+
+input#six:checked ~ .slider__items > .first {
+    margin-left: -500%;
+}
+
+/*.item {*/
+/*    height: 50vh;*/
+/*    max-width: 100%;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    overflow: hidden;*/
+/*    display: none;*/
+/*}*/
+
+/*.item > img {*/
+/*    max-width: 100%;*/
+/*    max-height: 100%;*/
+/*    object-fit: contain;*/
+/*}*/
 
 .item-radio {
     padding: .3rem;
@@ -95,16 +133,16 @@ li {
     display: flex;
 }
 
-input#one:checked ~ .one,
-input#two:checked ~ .two,
-input#three:checked ~ .three,
-input#four:checked ~ .four,
-input#five:checked ~ .five,
-input#six:checked ~ .six {
-    display: flex;
-    animation-duration: 3s;
-    animation-name: slow;
-}
+/*input#one:checked ~ .one,*/
+/*input#two:checked ~ .two,*/
+/*input#three:checked ~ .three,*/
+/*input#four:checked ~ .four,*/
+/*input#five:checked ~ .five,*/
+/*input#six:checked ~ .six {*/
+/*    display: flex;*/
+/*    animation-duration: 3s;*/
+/*    animation-name: slow;*/
+/*}*/
 
 input#one:checked ~ .navigation__container > .one,
 input#two:checked ~ .navigation__container > .two,
@@ -157,10 +195,13 @@ input#six:checked ~ .navigation__container > .bar__container > .six > span {
         font-size: 2.25rem;
     }
 
-    .item {
-        height: 30vh;
-    }
+    /*.slider__container {*/
+    /*    width: 25rem;*/
+    /*}*/
 
+    /*.item {*/
+    /*    height: 30vh;*/
+    /*}*/
     .item-radio > span {
         width: .5rem;
         height: .5rem;
@@ -183,7 +224,19 @@ input#six:checked ~ .navigation__container > .bar__container > .six > span {
     }
 
     h1 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
+    }
+
+    /*.slider__container {*/
+    /*    width: 20rem;*/
+    /*}*/
+
+    /*.item {*/
+    /*    height: 20vh;*/
+    /*}*/
+    .item-radio > span {
+        width: .2rem;
+        height: .2rem;
     }
 }
 
