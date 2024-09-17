@@ -38,6 +38,13 @@ h1 {
     font-size: 2rem;
 }
 
+a {
+    margin-bottom: .5rem;
+    font-size: 1rem;
+    color: lightskyblue;
+    text-decoration: none;
+}
+
 ul {
     list-style-type: none;
     display: flex;
@@ -96,6 +103,7 @@ input#four:checked ~ .slider__items > .first {
 }
 
 .item-radio:hover > span {
+    border: .1rem solid lightskyblue;
     background-color: lightgray;
     transition: .5s ease-in-out;
 }
@@ -157,6 +165,10 @@ input#four:checked ~ .navigation__container > .bar__container > .four > span {
         font-size: 2.25rem;
     }
 
+    a {
+        font-size: .8rem;
+    }
+
     .item-radio > span {
         width: .5rem;
         height: .5rem;
@@ -180,6 +192,10 @@ input#four:checked ~ .navigation__container > .bar__container > .four > span {
 
     h1 {
         font-size: 1.5rem;
+    }
+
+    a {
+        font-size: .5rem;
     }
 
     .item-radio > span {
